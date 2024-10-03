@@ -1,0 +1,23 @@
+.cartoes{
+    min-width: 200px;
+    min-height: 170px;
+    max-width: 200px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid rebeccapurple;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgb(128, 128, 128, 0.482);
+    transition: all 0.5s;
+}
+.cartoes:hover{
+    transform: scale(1.1);
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+h1{
+    min-width: 100%;
+}
