@@ -23,7 +23,7 @@
             $consultar->execute();
             $resultados = $consultar->fetchAll(PDO::FETCH_ASSOC);
             foreach ($resultados as $item) {
-            echo "<div class= 'cartoes'>";
+        echo "<div class= 'cartoes'>";
                 echo "<b>Matrícula: </b>";
                 echo $item ['matricula_est'] . "<br>";
 
@@ -46,8 +46,23 @@
                 echo "<b> Eventos: </b>";
                 echo $item ['aviso_eventos'] . "<br> <br>";
 
-                echo "</div>";
-            }
+                $matricula = $item['matricula_est'];
+                echo "<a href='pagina_deletar.php?cod=$matricula'>";
+                    echo "<button>🗑️Deletar</button>";
+                echo "</a> ";
+
+                echo "<a href='pagina_editar.php?cod=$matricula'>";
+                    echo "<button>✏️Editar</button>";
+                echo "</a>";
+
+        echo "</div>";
+
+
+
+        }
+
+
+
         }catch(PDOException $erro){
             echo "Falha ao Consultar!". $erro->getMessage();
         }
