@@ -1,4 +1,5 @@
 <?php
+include "verificar_login.php";
 $matricula =$_GET['cod'];
 
     echo "Tem certeza que deseja apagar a matrícula nº $matricula?";

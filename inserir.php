@@ -1,5 +1,6 @@
 <?php
 include "conexao.php";
+include "verificar_login.php";
 
 //Guardar os dados recebidos
 $nome = $_POST['nome_estudante'];
